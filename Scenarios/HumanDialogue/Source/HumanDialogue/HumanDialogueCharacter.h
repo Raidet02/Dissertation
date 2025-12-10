@@ -40,6 +40,9 @@ protected:
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, Category ="Input")
 	UInputAction* MoveAction;
+	
+	UPROPERTY(EditAnywhere, Category="Input")
+	UInputAction* SprintAction;
 
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, Category ="Input")
@@ -51,6 +54,9 @@ protected:
 	
 public:
 	AHumanDialogueCharacter();
+
+	float SprintSpeed = 1200.0f;
+	float WalkSpeed = 600.0f;
 
 protected:
 
@@ -67,6 +73,12 @@ protected:
 	/** Handles move inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoMove(float Right, float Forward);
+
+	UFUNCTION(BlueprintCallable, Category="Input")
+	virtual void DoSprintStart();
+	UFUNCTION(BlueprintCallable, Category="Input")
+	virtual void DoSprintEnd();
+	
 
 	/** Handles jump start inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")

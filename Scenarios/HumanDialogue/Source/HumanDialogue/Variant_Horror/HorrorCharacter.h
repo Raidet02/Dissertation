@@ -29,7 +29,7 @@ protected:
 
 	/** Fire weapon input action */
 	UPROPERTY(EditAnywhere, Category ="Input")
-	UInputAction* SprintAction;
+	//UInputAction* SprintAction;
 
 	/** If true, we're sprinting */
 	bool bSprinting = false;

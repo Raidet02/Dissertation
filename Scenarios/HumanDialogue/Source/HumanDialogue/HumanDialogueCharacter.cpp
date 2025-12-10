@@ -55,6 +55,8 @@ void AHumanDialogueCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AHumanDialogueCharacter::MoveInput);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Started, this, &AHumanDialogueCharacter::DoSprintStart);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Canceled, this, &AHumanDialogueCharacter::DoSprintEnd);
 
 		// Looking/Aiming
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AHumanDialogueCharacter::LookInput);
@@ -105,6 +107,16 @@ void AHumanDialogueCharacter::DoMove(float Right, float Forward)
 		AddMovementInput(GetActorRightVector(), Right);
 		AddMovementInput(GetActorForwardVector(), Forward);
 	}
+}
+
+void AHumanDialogueCharacter::DoSprintStart()
+{
+	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
+}
+
+void AHumanDialogueCharacter::DoSprintEnd()
+{
+	GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 }
 
 void AHumanDialogueCharacter::DoJumpStart()
