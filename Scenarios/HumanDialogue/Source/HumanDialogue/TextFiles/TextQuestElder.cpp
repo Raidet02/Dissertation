@@ -17,6 +17,7 @@ void ATextQuestElder::GetDialogue()
 	PlayerP2Dialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/PlayerP2Dialogue.txt");
 	PlayerP3Dialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/PlayerP3Dialogue.txt");
 	WalkerDialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/WalkerDialogue.txt");
+	BarDialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/BarDialogue.txt");
 }
 
 void ATextQuestElder::BeginPlay()

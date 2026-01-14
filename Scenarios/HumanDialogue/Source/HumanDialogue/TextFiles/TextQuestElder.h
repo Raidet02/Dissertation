@@ -27,6 +27,8 @@ public:
 	TArray<FString> PlayerP3Dialogue;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	TArray<FString> WalkerDialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> BarDialogue;
 
 	UReadFromFile* ReadFromFile;
 
