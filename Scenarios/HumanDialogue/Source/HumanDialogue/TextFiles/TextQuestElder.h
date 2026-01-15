@@ -30,6 +30,23 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	TArray<FString> BarDialogue;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIElderP1Dialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIElderP2Dialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIKnightDialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIPlayerP1Dialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIPlayerP2Dialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIPlayerP3Dialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIWalkerDialogue;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> GAIBarDialogue;
+
 	UReadFromFile* ReadFromFile;
 
 	UFUNCTION(BlueprintCallable)
