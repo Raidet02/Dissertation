@@ -21,7 +21,7 @@ void ATextQuestElder::GetDialogue()
 
 	GAIElderP1Dialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/Content/GAIDialogue/GAIElderP1Dialogue.txt");
 	GAIElderP2Dialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/Content/GAIDialogue/GAIElderP2Dialogue.txt");
-	GAIKnightDialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/ContentGAIDialogue/GAIKnightDialogue.txt");
+	GAIKnightDialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/Content/GAIDialogue/GAIKnightDialogue.txt");
 	GAIPlayerP1Dialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/Content/GAIDialogue/GAIPlayerP1Dialogue.txt");
 	GAIPlayerP2Dialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/Content/GAIDialogue/GAIPlayerP2Dialogue.txt");
 	GAIPlayerP3Dialogue = ReadFromFile->ReadFile(FPaths::ProjectDir()+"/Content/GAIDialogue/GAIPlayerP3Dialogue.txt");
